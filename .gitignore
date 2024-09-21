@@ -1,5 +1,9 @@
 .env
 .bak
-.sqlite3
+#.sqlite3
 .odt
 .vscode
+
+db.sqlite3
+.gitattributes
+.DS_store

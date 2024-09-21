@@ -32,6 +32,7 @@ prod-collectstatic:
 	python manage.py collectstatic --settings=recipe_project.settings.prod
 
 
+
 # Export Project Structure
 struct:
 	tree /F /A > structure.txt
