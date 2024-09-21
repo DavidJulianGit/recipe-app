@@ -13,7 +13,8 @@ CSRF_TRUSTED_ORIGINS = [
     "https://localhost",
     "https://127.0.0.1",
     "https://0.0.0.0",
-    "https://recipe-app-production-7591.up.railway.app"
+    "https://recipe-app-production-7591.up.railway.app",
+    "https://whispering-forest-79119-3ed907d805e9.herokuapp.com/"
 ]  
 
 MIDDLEWARE = MIDDLEWARE + ["whitenoise.middleware.WhiteNoiseMiddleware"]
