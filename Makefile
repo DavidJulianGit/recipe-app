@@ -24,13 +24,15 @@ prod-install:
 	pip install -r requirements/prod.txt
 prod-migrate:
 	python manage.py migrate --settings=recipe_project.settings.prod
+
+prod-mm:
+	python manage.py makemigrations --settings=recipe_project.settings.prod
 prod-superuser:
 	python manage.py createsuperuser --settings=recipe_project.settings.prod
 prod-gunicorn:
-	gunicorn recipe_project.wsgi --env DJANGO_SETTINGS_MODULE=recipe_project.settings.prod -c recipe_project/prod.py
+	gunicorn --env DJANGO_SETTINGS_MODULE=recipe_project.settings.prod --bind 0.0.0.0:8000 -c recipe_project/prod/prod.py --log-file -
 prod-collectstatic:
 	python manage.py collectstatic --settings=recipe_project.settings.prod
-
 
 
 # Export Project Structure

@@ -1,6 +1,6 @@
-
 C:.
 |   .env
+|   .env_prod
 |   .gitignore
 |   db.sqlite3
 |   Makefile
@@ -155,6 +155,7 @@ C:.
 |           
 +---recipe_project
 |   |   asgi.py
+|   |   prod.py
 |   |   urls.py
 |   |   wsgi.py
 |   |   
