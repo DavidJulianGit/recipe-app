@@ -8,38 +8,44 @@
 
     <div class="row mt-5 pb-4 border-bottom"> 
     
-        <div class="col-auto"> 
-            <img src="{{ recipe.image.url }}" class="img-fluid rounded shadow" 
-                 style="object-fit: cover; max-width: 400px;" alt="{{ recipe.name }}">
+        <div class="col-12 col-md-6"> 
+            <img src="{{ recipe.image.url }}" class="img-fluid rounded shadow recipe-image mb-3 mb-md-0" 
+                 alt="{{ recipe.name }}">
         </div>
-      
-        <div class="col ps-3"> 
+    
+        <div class="col-12 col-md-6 ps-3 mt-3 mt-md-0"> 
             <h2 class="display-4">{{ recipe.name }}</h2>
+            
+            <!-- Ingredients Section -->
             <div class="row">
-                <div class="col-2">
-                    <p class="mb-1 "><strong>Ingredients:</strong></p>
+                <div class="col-12 col-sm-auto">
+                    <p class="mb-1"><strong>Ingredients:</strong></p>
                 </div>
-                <div class="col">
-                    <ul class=" ms-0 px-0">
+                <div class="col-12 col-sm">
+                    <ul class="ms-0 px-0">
                         {% for ingredient in recipe.ingredients|split_ingredients %}
-                            <li class="list-group-item" >{{ ingredient }}</li>
+                            <li class="ms-3">{{ ingredient }}</li>
                         {% endfor %}
                     </ul>
                 </div>
             </div>
+    
+            <!-- Cooking Time Section -->
             <div class="row">
-                <div class="col-2">
-                    <p><strong>Cooking Time:</strong></p>
+                <div class="col-12 col-sm-auto">
+                    <p class="m-0"><strong>Cooking Time:</strong></p>
                 </div>
-                <div class="col">
-                    <p>{{ recipe.cooking_time }} minutes</p>
+                <div class="col-12 col-sm">
+                    <p class="">{{ recipe.cooking_time }} minutes</p>
                 </div>
             </div>
+    
+            <!-- Difficulty Section -->
             <div class="row">
-                <div class="col-2">
-                    <p><strong>Difficulty:</strong> 
+                <div class="col-12 col-md-auto">
+                    <p class="m-0"><strong>Difficulty:</strong></p>
                 </div>
-                <div class="col">
+                <div class="col-12 col-md">
                     <button type="button" class="btn {{ recipe.difficulty|style_difficulty }} disabled py-0 px-1">{{ recipe.difficulty }}</button>
                 </div>
             </div>

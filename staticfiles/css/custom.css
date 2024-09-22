@@ -5,7 +5,16 @@ body {
 
 .img_aboutme{
     max-width: 500px;
-    width:100%;
-    
+    width:100%; 
 }
 
+.recipe-image {
+    width: 100%; 
+    object-fit: cover;
+}
+
+@media (min-width: 768px) {
+    .recipe-image {
+        max-width: 400px; 
+    }
+}
